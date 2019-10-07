@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">
+      <h1>Detail</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <section *ngIf="isReady" class="section">
+    <div *ngIf="!isEdit" class="card">
+      <img src={{product.field_image_1}} alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>{{product.title}}</b></h4>
+        <p class="date">{{product.created}}</p>
+        <p>{{product.body}}</p>
+        <button class="button" (click)="buttonEdit()" type="submit">Edit</button>
+      </div>
+    </div>
+    <div *ngIf="isEdit" class="container">
+        <label for="userName"><b>Title</b></label>
+        <input type="text" placeholder="Enter Username" [(ngModel)]="product.title" name="userName" required>
+        <textarea name="textarea" rows="40" cols="30" [(ngModel)]="product.body"></textarea>
+        <button class="button login" (click)="save()" type="submit">Save</button>
+      </div>
+    <button class="button" routerLink="/product" type="submit">Go back</button>
+  </section>
+</ion-content>

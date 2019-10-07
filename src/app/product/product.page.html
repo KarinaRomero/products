@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title class="title">
+        <h1>Products</h1>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <section class="section">
+      <div class="card" *ngFor="let product of products">
+        <div class="contentImage">
+          <img src={{product.field_image_1}} alt="Cinque Terre" width="1000" height="300">
+          </div>
+          <div class="container">
+            <h4><b>{{product.title}}</b></h4>
+            <p class="date">{{product.created}}</p>
+            <p>{{(product.body.length>20)? (product.body | slice:0:20)+'..':(product.body)}} </p>
+            <button class="button detail" (click)="buttonClick($event, product.nid)" type="submit" routerLink="/detail/{{product.nid}}">Details</button>
+          </div>
+        </div>
+    </section>
+  </ion-content>

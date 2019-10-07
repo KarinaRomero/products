@@ -1,0 +1,47 @@
+.title{
+    background-color: #1F1F33;
+    color: white;
+  }
+  .contentImage{
+    position: relative;
+  }
+  .card {
+    padding: 2% 5%;
+  }
+  img {
+      border-radius: 5px;
+  }
+  .container {
+    padding: 2px 16px;
+  }
+  .button {
+    color: white;
+    font-size: 15px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #7a7dcc;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  input {
+    &[type='text'],
+    &[type='password'] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 5px;
+      color: #1F1F33;
+    }
+  }
+  .date {
+    color: #7a7dcc;
+    font-size: 12px;
+  }

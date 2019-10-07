@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <section class="section">
+    <form action="" method="post">
+      <div class="imgcontainer">
+        <img src="https://cdn.pixabay.com/photo/2016/04/15/18/05/computer-1331579_960_720.png" alt="Avatar" class="avatar">
+              </div>
+        <div class="container">
+          <label for="userName"><b>User name</b></label>
+          <input type="text" placeholder="Enter Username" [(ngModel)]="user.name" name="userName" required>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" [(ngModel)]="user.pass" name="psw" required>
+          <button class="button login" (click)="login()" type="submit">Login</button>
+          <button class="button register" (click)="cancel()" type="submit">Cancel</button>
+        </div>
+    </form>
+  </section>
+</ion-content>
